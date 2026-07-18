@@ -47,103 +47,103 @@ rule-providers:
   lan:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/sdnychen/clash/refs/heads/main/rules/lan.yaml
+    url: https://raw.githubusercontent.com/sdnychen/clash/refs/heads/main/rules/lan.yaml
 
   # AI服务
   ai:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/AI.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/AI.yaml
 
   # Google
   google:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Google.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Google.yaml
 
   # GoogleCN
   google-cn:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCN.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCN.yaml
 
   # GoogleCN IP
   google-cn-ip:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml
 
   # GoogleFCM
   google-fcm:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleFCM.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleFCM.yaml
 
   # Github
   github:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
 
   # Apple
   apple:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Apple.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Apple.yaml
 
   # Jetbrains
   jetbrains:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Jetbrains/Jetbrains.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Jetbrains/Jetbrains.yaml
 
   # Microsoft
   microsoft:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Microsoft.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Microsoft.yaml
 
   # Bilibili
   bilibili:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Bilibili.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Bilibili.yaml
 
   # Baidu
   baidu:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Baidu.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Baidu.yaml
 
   # Alibaba
   alibaba:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Alibaba.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Alibaba.yaml
 
   # Amazon
   amazon:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Amazon.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Amazon.yaml
 
   # Adobe
   adobe:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Adobe.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Adobe.yaml
 
   # Steam
   steam:
     type: http
     behavior: classical
-    path: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/Steam.yaml
+    url: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/Steam.yaml
 
   # SteamCN
   steam-cn:
     type: http
     behavior: classical
-    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
 
 # ========== 规则 ==========
 rules:
