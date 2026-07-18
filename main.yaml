@@ -1,0 +1,169 @@
+# ========== 代理组 ==========
+proxy-groups:
+  # 手动选择
+  - name: SELECT
+    type: select
+    proxies:
+      - DIRECT
+      - AUTO
+    include-all-proxies: true
+
+  # 自动选择
+  - name: AUTO
+    type: url-test
+    proxies:
+      - ss
+    url: https://www.gstatic.com/generate_204
+    include-all-proxies: true
+    interval: 300
+
+  # AI
+  - name: AI
+    type: select
+    proxies:
+      - SELECT
+    include-all-proxies: true
+
+  # Apple
+  - name: APPLE
+    type: select
+    proxies:
+      - DIRECT
+      - SELECT
+    include-all-proxies: true
+
+  # 漏网之鱼
+  - name: OTHER
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - SELECT
+    include-all-proxies: true
+
+# ========== 规则组 ==========
+rule-providers:
+  # 局域网
+  lan:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/sdnychen/clash/refs/heads/main/rules/lan.yaml
+
+  # AI服务
+  ai:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/AI.yaml
+
+  # Google
+  google:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Google.yaml
+
+  # GoogleCN
+  google-cn:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCN.yaml
+
+  # GoogleCN IP
+  google-cn-ip:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml
+
+  # GoogleFCM
+  google-fcm:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleFCM.yaml
+
+  # Github
+  github:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
+
+  # Apple
+  apple:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Apple.yaml
+
+  # Jetbrains
+  jetbrains:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Jetbrains/Jetbrains.yaml
+
+  # Microsoft
+  microsoft:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Microsoft.yaml
+
+  # Bilibili
+  bilibili:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Bilibili.yaml
+
+  # Baidu
+  baidu:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Baidu.yaml
+
+  # Alibaba
+  alibaba:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Alibaba.yaml
+
+  # Amazon
+  amazon:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Amazon.yaml
+
+  # Adobe
+  adobe:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Adobe.yaml
+
+  # Steam
+  steam:
+    type: http
+    behavior: classical
+    path: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/Steam.yaml
+
+  # SteamCN
+  steam-cn:
+    type: http
+    behavior: classical
+    path: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
+
+# ========== 规则 ==========
+rules:
+  - RULE-SET,lan,DIRECT
+  - RULE-SET,bilibili,DIRECT
+  - RULE-SET,alibaba,DIRECT
+  - RULE-SET,baidu,DIRECT
+  - RULE-SET,google-cn,DIRECT
+  - RULE-SET,google-fcm,DIRECT
+  - RULE-SET,jetbrains,DIRECT
+  - RULE-SET,adobe,DIRECT
+  - RULE-SET,steam-cn,DIRECT
+
+  - RULE-SET,apple,APPLE
+  - RULE-SET,ai,AI
+
+  - RULE-SET,steam,SELECT
+  - RULE-SET,google,SELECT
+  - RULE-SET,github,SELECT
+  - RULE-SET,amazon,SELECT
+
+  - GEOIP,CN,DIRECT
+  - MATCH,OTHER
