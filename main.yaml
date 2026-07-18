@@ -12,7 +12,6 @@ proxy-groups:
   - name: AUTO
     type: url-test
     proxies:
-      - ss
     url: https://www.gstatic.com/generate_204
     include-all-proxies: true
     interval: 300
@@ -137,7 +136,7 @@ rule-providers:
   steam:
     type: http
     behavior: classical
-    url: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/Steam.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Steam.yaml
 
   # SteamCN
   steam-cn:
